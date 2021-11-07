@@ -1,0 +1,484 @@
+use ZenClass
+------------------------------------------------------------------------------------------------------------------------------------------
+Creating users
+
+db.createCollection("users");
+
+1. db.users.insertMany([
+  {
+    "name": "Surya",
+    "email": "surya@gmail.com",
+    "id": 1,
+    "mentor": "Naga"
+  },
+  {
+    "name": "Kumar",
+    "email": "kumar@gmail.com",
+    "id": 2,
+    "mentor": "Ravi"
+  },
+  {
+    "name": "Mani",
+    "email": "mani@gmail.com",
+    "id": 3,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Rohit",
+    "email": "rohit@gmail.com",
+    "id": 4,
+    "mentor": "Naga"
+  },
+  {
+    "name": "Bavani",
+    "email": "bavani@gmail.com",
+    "id": 5,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Jaya",
+    "email": "jaya@gmail.com",
+    "id": 6,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Vijay",
+    "email": "vijay@gmail.com",
+    "id": 7,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Ankit",
+    "email": "ankit@gmail.com",
+    "id": 8,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Harish",
+    "email": "harish@gmail.com",
+    "id": 9,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Tina",
+    "email": "tina@gmail.com",
+    "id": 10,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Kutty",
+    "email": "kutty@gmail.com",
+    "id": 11,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Ravi",
+    "email": "ravi@gmail.com",
+    "id": 12,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Laxmi",
+    "email": "laxmi@gmail.com",
+    "id": 13,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Lalit",
+    "email": "lalit@gmail.com",
+    "id": 14,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Suman",
+    "email": "suman@gmail.com",
+    "id": 15,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Shyam",
+    "email": "shyam@gmail.com",
+    "id": 16,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Deepika",
+    "email": "deepika@gmail.com",
+    "id": 17,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Sandeep",
+    "email": "sandeep@gmail.com",
+    "id": 18,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Saranya",
+    "email": "saranya@gmail.com",
+    "id": 19,
+    "mentor": "Mohan"
+  },
+  {
+    "name": "Sharon",
+    "email": "sharon@gmail.com",
+    "id": 20,
+    "mentor": "Naga"
+  },
+  
+]);
+
+------------------------------------------------------------------------------------------------------------------------------------------
+///creating codekata collection
+
+db.createCollection("codekata");
+
+2. db.codekata.insertMany([
+  {
+    "userName": "Sharon",
+    "email": "sharon@gmail.com",
+    "totalQuestions": 10,
+    "questionsSolved": 8
+  },
+  {
+    "userName": "Vijay",
+    "email": "vijay@gmail.com",
+    "totalQuestions": 10,
+    "questionsSolved": 5
+  },
+  {
+    "userName": "Sandeep",
+    "email": "sandeep@gmail.com",
+    "totalQuestions": 10,
+    "questionsSolved": 7
+  },
+  {
+    "userName": "Lalit",
+    "email": "lalit@gmail.com",
+    "totalQuestions": 10,
+    "questionsSolved": 10
+  },
+  {
+    "userName": "Harish",
+    "email": "harry@gmail.com",
+    "totalQuestions": 10,
+    "questionsSolved": 8
+  }
+]);
+
+------------------------------------------------------------------------------------------------------------------------------------------
+// creating attendance collections
+
+db.createCollection("attendance");
+
+3. db.attendance.insertMany([
+  {
+    "date": ISODate("2020-10-13T00:00:00Z"),
+    "studentsAbsent": [
+      "Vijay",
+      "Sandeep"
+    ],
+    "studentsTaskNotSubmitted": [
+      "Vijay",
+      "Lalit"
+    ]
+  },
+  {
+    "date": ISODate("2020-10-15T00:00:00Z"),
+    "studentsAbsent": [
+      "Harish",
+      "Suman"
+    ],
+    "studentsTaskNotSubmitted": [
+      "Harish",
+      "Shyam"
+    ]
+  },
+  {
+    "date": ISODate("2020-10-17T00:00:00Z"),
+    "studentsAbsent": [
+      "Ravi",
+      "Shyam",
+      "Suman"
+    ],
+    "studentsTaskNotSubmitted": [
+      "Ravi",
+      "Tina"
+    ]
+  },
+  {
+    "date": ISODate("2020-10-20T00:00:00Z"),
+    "studentsAbsent": [
+      "Ankit",
+      "Jaya",
+      "Bavani",
+      "Shyam",
+      "Rohit"
+    ],
+    "studentsTaskNotSubmitted": [
+      "Vijay",
+      "Jaya"
+    ]
+  },
+  {
+    "date": ISODate("2020-10-25T00:00:00Z"),
+    "studentsAbsent": [],
+    "studentsTaskNotSubmitted": [
+      "Surya",
+      "Deepika",
+      "Kumar"
+    ]
+  },
+  {
+    "date": ISODate("2020-10-30T00:00:00Z"),
+    "studentsAbsent": [],
+    "studentsTaskNotSubmitted": []
+  },
+  
+]);
+
+------------------------------------------------------------------------------------------------------------------------------------------
+/// inserting topics and create topic collections
+
+db.createCollection("topics");
+
+db.topics.insertMany([
+  {
+    "topicName": "Html nav",
+    "id": 1,
+    "month": "september"
+  },
+  {
+    "topicName": "CSS-diplay flex",
+    "id": 2,
+    "month": "september"
+  },
+  {
+    "topicName": "javascript functions",
+    "id": 3,
+    "month": "october"
+  },
+  {
+    "topicName": "reactjs hooks",
+    "id": 4,
+    "month": "october"
+  },
+  {
+    "topicName": "MySql",
+    "id": 5,
+    "month": "november"
+  }
+]);
+------------------------------------------------------------------------------------------------------------------------------------------
+/// creating tasks collection
+
+db.createCollection("tasks");
+
+db.tasks.insertMany([{
+    "task1": "create survey form",
+    "task2": "Async/Await using fetch API",
+    "month": "september"
+  },
+  {
+    "task1": "develop youtube clone",y
+    "task2": "create a project based on useContext",
+    "month": "october"
+  },
+  {
+    "task1": "create ER diagram in MySQL",
+    "task2": "create API end points in node express server",
+    "month": "november"
+  }])
+------------------------------------------------------------------------------------------------------------------------------------------
+// creating compnay drive collection
+
+db.createCollection("companyDrives");
+
+db.companyDrives.insertMany([
+  {
+    "date": ISODate("2020-10-13T00:00:00Z"),
+    "name": "TechMahindra",
+    "studentsAttended": [
+      "Vijay",
+      "Sandeep",
+      "Deepika",
+      "Sharon",
+      "Lalit"
+    ]
+  },
+  {
+    "date": ISODate("2020-10-15T00:00:00Z"),
+    "name": "Oracle",
+    "studentsAttended": [
+      "Sandeep",
+      "Bavani",
+      "Shyam",
+      "Suman"
+    ]
+  },
+  {
+    "date": ISODate("2020-10-20T00:00:00Z"),
+    "name": "Uber",
+    "studentsAttended": [
+      "Tina",
+      "Kutty",
+      "Ravi",
+      "Suman",
+      "Shyam"
+    ]
+  },
+  {
+    "date": ISODate("2020-10-30T00:00:00Z"),
+    "name": "Amazon",
+    "studentsAttended": [
+      "Tina",
+      "Rohit",
+      "Ankit",
+      "Jaya",
+      "Harish",
+      "Laxmi"
+    ]
+  },
+  
+])
+
+------------------------------------------------------------------------------------------------------------------------------------------
+// creating mentor's colllection
+
+db.createCollection("mentors");
+
+db.mentors.insertMany([
+  {
+    "mentorName": "Naga",
+    "email": "naga@gmail.com"
+  },
+  {
+    "mentorName": "Mohan",
+    "email": "mohan@gmail.com"
+  },
+  {
+    "mentorName": "Ravi",
+    "email": "ravi@gmail.com"
+  },
+  
+])
+
+------------------------------------------------------------------------------------------------------------------------------------------
+1. Find all the topics and tasks which are thought in the month of October
+
+db.topics.find({
+  month: "october"
+},
+{
+  topicName: 1
+})
+
+db.tasks.find({
+  month: "october"
+},
+{
+  task1: 1,
+  task2: 1
+})
+------------------------------------------------------------------------------------------------------------------------------------------
+2. Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+db.companyDrives.find({
+  date: {
+    $gte: ISODate("2020-10-15T00:00:00Z"),
+    $lte: ISODate("2020-10-31T00:00:00Z")
+  }
+})
+------------------------------------------------------------------------------------------------------------------------------------------
+3. Find all the company drives and students who are appeared for the placement.
+
+db.companyDrives.find({},
+{
+  "name": 1,
+  "studentsAttended": 1
+});
+------------------------------------------------------------------------------------------------------------------------------------------
+4. Find the number of problems solved by the user in codekata
+
+db.codekata.find({
+  "userName": "Sharon"
+},
+{
+  "userName": 1,
+  "questionsSolved": 1
+});
+------------------------------------------------------------------------------------------------------------------------------------------
+5. Find all the mentors with who has the mentee's count more than 15
+
+db.users.aggregate([
+  {
+    $group: {
+      _id: "$mentor",
+      totalMentees: {
+        $sum: 1
+      }
+    }
+  },
+  {
+    $project: {
+      mentor: "$_id",
+      _id: 0,
+      totalMentees: 1
+    }
+  },
+  {
+    $match: {
+      totalMentees: {
+        $gt: 15
+      }
+    }
+  }
+])
+------------------------------------------------------------------------------------------------------------------------------------------
+6. Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+db.attendance.aggregate([
+  {
+    $match: {
+      date: {
+        $gte: ISODate("2020-10-15T00:00:00Z"),
+        $lte: ISODate("2020-10-31T00:00:00Z")
+      }
+    }
+  },
+  {
+    $project: {
+      date: 1,
+      commonToBoth: {
+        $setIntersection: [
+          "$studentsAbsent",
+          "$studentsTaskNotSubmitted"
+        ]
+      }
+    }
+  },
+  {
+    $match: {
+      commonToBoth: {
+        $ne: []
+      }
+    }
+  },
+  {
+    $project: {
+      date: 1,
+      counts: {
+        $size: "$commonToBoth"
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "counts",
+      total: {
+        $sum: "$counts"
+      }
+    }
+  }
+]);
+------------------------------------------------------------------------------------------------------------------------------------------
